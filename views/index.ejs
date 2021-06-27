@@ -1,0 +1,83 @@
+<div class="navBar">
+  <nav class="navigation">
+    <ul>
+      <li><a href="#">Share Link</a></li>
+      <ul class="nav-bar" id="nav-bar">
+        <li><a class="links active" href="#">Home</a></li>
+        <li><a class="links" href="./about">About</a></li>
+      </ul>
+    </ul>
+  </nav>
+</div>
+
+<!-- Lgog/project name -->
+<div class="middle-container">
+  <div class="logo">
+    <h1 class="pinrate">Bookmark</h1>
+  </div>
+
+  <form class="addContent" method="POST" action="/">
+    <div class="card">
+      <!-- add pin card -->
+      <div class="card-pin-content">
+        <input
+          type="text"
+          name="pin"
+          id="pin"
+          class="addPin"
+          placeholder="Item Name"
+          maxlength="25"
+          required
+        />
+        <div class="lineBw"></div>
+        <input
+          type="text"
+          name="pinUrl"
+          class="addUrl"
+          placeholder="Paste URL to save  "
+          required
+        />
+      </div>
+    </div>
+    <div class="content-controls">
+      <!-- add or cancel features -->
+      <button type="submit">+ Add Item</button>
+      <button type="reset">X Cancel</button>
+    </div>
+  </form>
+  <section class="lists">
+    <nav class="layout-nav" id="layoutNav">
+      <div class="showHide">
+        <button type="button" id="hs">Show/Hide</button>
+      </div>
+      <div class="layout-styles">
+        <button class="list">
+          <img src="../public/images/list.png" alt="list" />List
+        </button>
+        <button class="grid">
+          <img src="../public/images/menu.png" alt="grid" />Grid
+        </button>
+      </div>
+    </nav>
+    <div class="pinned-list" id="pinnedList" style="display: grid">
+      <!-- demo lists  -->
+      <% item.forEach(details => { %>
+      <div class="pinned-cards">
+        <div class="card-pin-content">
+          <h4 class="pinnedText"><%= details.pin %></h4>
+          <div class="lineBw"></div>
+          <a href="<%= details.pinUrl %>"
+            >click to open <%= details.pin%> link
+          </a>
+        </div>
+      </div>
+      <% })%>
+    </div>
+  </section>
+</div>
+<footer>
+  <h5 class="love">
+    Made with <img src="../public/images/heart.png" alt="LOVE" /> by
+    <span class="fonzy">Nikhil Kumar Swain</span>
+  </h5>
+</footer>

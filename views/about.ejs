@@ -1,0 +1,35 @@
+
+
+<div class="container">
+  <button class="accordion">What is Bookmark ?</button>
+  <div class="accordion-content">
+    <p>It's a app that let you save your important articles, videos or any other urls for later use. You can use this as a personal bookmark app.</p>
+    
+  </div>
+
+  <button class="accordion">Additional Info</button>
+  <div class="accordion-content">
+    <p>
+      The url that doesn't match the url pattern will not be saved so try saving the full url (having protocol, sub domain name and domain name) for example "https://www.google.com". 
+    </p>
+  </div>
+
+
+  <a href="/"><button class="accordion">Go back</button></a>
+</div>
+<script>
+  let acc = document.querySelectorAll('.accordion');
+  let i;
+
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener('click', function () {
+      this.classList.toggle('activeEle');
+      let panel = this.nextElementSibling;
+      if (panel.style.maxHeight) {
+        panel.style.maxHeight = null;
+      } else {
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      }
+    });
+  }
+</script>

@@ -1,0 +1,37 @@
+{
+  "name": "pinrate",
+  "version": "1.0.0",
+  "description": "pin fav actress and specific url",
+  "main": "app.js",
+  "dependencies": {
+    "connect-flash": "^0.1.1",
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.17.1",
+    "mongoose": "^5.9.28"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "test": "node app.js",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikhilswain/Pinrate.git"
+  },
+  "keywords": [
+    "pin",
+    "favorite"
+  ],
+  "author": "nikhil",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nikhilswain/Pinrate/issues"
+  },
+  "homepage": "https://github.com/nikhilswain/Pinrate#readme"
+}

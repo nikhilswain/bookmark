@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Plaster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+:root {
+  --button-bg: #eaeaea;
+  --pin-Bg: #e4e4e4;
+  --pin-listBg: #f2f2f2;
+  --body-Bg: #f8f8f8;
+  --active-link: #00c2ff;
+  --pinrate-log0Color: #00d26d;
+  --additem-bg: #00ff85;
+  --cancelitem-bg: #ffe600;
+  --button-font-sizes : 1.1em;
+  --fontSize-list: 1.1em;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: var(--body-Bg);
+  font-family: Roboto, sans-serif;
+  display: grid;
+}
+
+.navigation {
+  max-width: 80%;
+  margin: 0 auto;
+  margin-top: 2em;
+}
+
+.navigation > ul,
+ul.nav-bar {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation > ul {
+  color: black;
+  flex: 1 1 200px;
+}
+
+ul.nav-bar {
+  width: 18%;
+}
+
+.navigation > ul > li > a,
+.navigation ul.nav-bar > li > a {
+  color: black;
+  text-decoration: none;
+}
+.navigation > ul > li > a {
+  background-color: var(--button-bg);
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+.links::after {
+  content: '';
+  display: block;
+  background: black;
+  width: 0;
+  height: 2px;
+  transition: width 0.3s ease-in-out;
+}
+
+.links:hover::after {
+  width: 100%;
+}
+
+.active::after {
+  width: 100%;
+  background: var(--active-link);
+}
+
+.logo {
+  text-align: center;
+  margin-top: 1em;
+  font-family: Plaster, sans-serif;
+  font-size: 2.2rem;
+  color: var(--pinrate-log0Color);
+}
+.middle-container{
+  display: grid;
+  place-items: center;
+}
+.addContent {
+  width: 50%;
+  margin-bottom: 4em;
+}
+.card {
+  width: 100%;
+  background-color: var(--pin-Bg);
+  border-radius: 10px;
+  padding: 8px 0;
+  line-height: 0.5rem;
+  box-shadow: 2px 3px 5px 4px rgba(0, 0, 0, 0.25);
+}
+
+.card .card-pin-content {
+  padding-left: 2em;
+  width: 80%;
+}
+.card-pin-content .lineBw {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+}
+.card-pin-content h4 {
+  display: inline-block;
+}
+
+input {
+  border: none;
+  padding: 20px 0;
+  background: none;
+  font-size: 18px;
+  outline: none;
+}
+input::placeholder {
+  color: black;
+  font-weight: 500;
+}
+input.addUrl {
+  width: 100%;
+}
+
+.content-controls {
+  width: 100%;
+  margin-top: 2em;
+}
+.content-controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+}
+/* .content-controls . {
+  list-style-type: none;
+  vertical-align: center;
+} */
+.content-controls button {
+  border: none;
+  text-decoration: none;
+  padding: 8px 20px;
+  color: black;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  font-size: var(--button-font-sizes);
+}
+
+.content-controls button[type='submit'] {
+  background-color: var(--additem-bg);
+}
+.content-controls button[type='reset'] {
+  background-color: var(--cancelitem-bg);
+}
+
+section.lists {
+  width: 50%;
+  margin-top: 2em;
+}
+
+.layout-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+.layout-nav .showHide  button{
+  background-color: var(--button-bg);
+  padding: 8px 12px;
+  border-radius: 5px;
+   color: black;
+   border: none;
+   font-size: var(--button-font-sizes);
+}
+
+.layout-nav .layout-styles {
+  display: flex;
+}
+
+.layout-nav .layout-styles button  {
+  border: none;
+  border-radius: 5px;
+  padding: 8px 25px;
+  background-color: var(--button-bg);
+  color: black;
+  position: relative;
+  font-size: var(--button-font-sizes);
+}
+
+.layout-nav .layout-styles button img {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 8px;
+}
+.layout-nav .layout-styles button.list{
+  margin-right: 1em;
+}
+
+.pinned-list {
+  display: grid;
+  gap: 3em;
+  margin-top: 2em;
+}
+.pinned-cards {
+  width: 100%;
+  border-radius: 10px;
+  padding: 8px 0;
+  line-height: 0.5rem;
+  box-shadow: 2px 3px 5px 4px rgba(0, 0, 0, 0.25);
+  background-color: var(--pin-listBg);
+}
+.pinned-cards .card-pin-content {
+  padding-left: 2em;
+  width: 80%;
+}
+.pinned-cards .card-pin-content a {
+  display: inline-block;
+  color: #2c3cea;
+  cursor: pointer;
+  padding: 1.5em 0 1em 0;
+  text-decoration: none;
+  line-height: 1.2em;
+}
+.pinned-cards .card-pin-content {
+  font-size: var(--fontSize-list);
+}
+
+footer {
+  padding: 0 18px;
+  position: relative;
+  margin-top: 2em;
+}
+footer img {
+  vertical-align: middle;
+}
+footer h5 .fonzy {
+  font-family: 'Niconne', cursive;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* class to be added in pinned items on grid view */
+.grid-view{
+  grid-template-columns: repeat(2,1fr);
+  padding: 8px 5px;
+}
+/* also change the mainContainer width to 50% */
+
+@media screen and (max-width:780px){
+  section.lists, .addContent{
+    width: 80%;
+  }
+  .layout-nav{
+    display: none;
+  }
+  ul.nav-bar{
+    width: 40%;
+  }
+  .pinned-cards .card-pin-content {
+    font-size: 14px;
+  }
+  .logo{
+    font-size: 1.2rem;
+  }
+  body{
+    margin: 0;
+    overflow-x: hidden;
+  }
+}
